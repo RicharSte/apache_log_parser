@@ -34,7 +34,7 @@ def get_and_save_data(request):
         info = matching.groupdict()
         
         new_logs.ip = info['host']
-        new_logs.data = info['time']
+        new_logs.date = info['time']
         new_logs.method = info['request'].split()[0]
         new_logs.url = info['request'].split()[1]
         new_logs.response = info['status']
@@ -47,4 +47,3 @@ def get_and_save_data(request):
         new_logs.save()
     
     return redirect('home-page')
-
