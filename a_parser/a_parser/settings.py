@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    #my apps
+    #добавляем приложение в настройки
     'get_data.apps.GetDataConfig'
 ]
 
@@ -58,7 +58,7 @@ ROOT_URLCONF = 'a_parser.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')], #добавляем папку с html 
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

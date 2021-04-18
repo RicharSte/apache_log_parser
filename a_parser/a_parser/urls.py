@@ -21,6 +21,7 @@ from get_data.views import home_page, get_and_save_data
 urlpatterns = [
     path('admin/', admin.site.urls),
     
+    #добавляем ссылки в url
     path('', home_page, name='home-page'),
     path('get-logs/', get_and_save_data)
 ]
